@@ -1,0 +1,517 @@
+[2024-11-30 13:16:53] [INFO] Database connection established successfully
+[2024-11-30 13:19:48] [INFO] Database connection established successfully
+[2024-11-30 13:20:15] [INFO] Login attempt initiated
+[2024-11-30 13:20:15] [INFO] Database connection established successfully
+[2024-11-30 13:20:15] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:20:26] [INFO] Login attempt initiated
+[2024-11-30 13:20:26] [INFO] Database connection established successfully
+[2024-11-30 13:20:26] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:20:27] [INFO] Login attempt initiated
+[2024-11-30 13:20:27] [INFO] Database connection established successfully
+[2024-11-30 13:20:27] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:20:44] [INFO] Login attempt initiated
+[2024-11-30 13:20:44] [INFO] Database connection established successfully
+[2024-11-30 13:20:44] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:22:13] [INFO] Login attempt initiated
+[2024-11-30 13:22:13] [INFO] Database connection established successfully
+[2024-11-30 13:22:13] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:22:13] [INFO] Database connection established successfully
+[2024-11-30 13:22:13] [INFO] Database connection established successfully
+[2024-11-30 13:32:06] [INFO] Login attempt initiated
+[2024-11-30 13:32:06] [INFO] Database connection established successfully
+[2024-11-30 13:32:06] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 13:32:06] [INFO] Database connection established successfully
+[2024-11-30 13:32:06] [INFO] Database connection established successfully
+[2024-11-30 13:32:06] [INFO] Making API request for word: please
+[2024-11-30 13:32:08] [INFO] Retrieved default course ID: 1
+[2024-11-30 13:32:08] [INFO] Translation cached successfully for word: please
+[2024-11-30 13:32:08] [INFO] Successfully translated: please to veuillez
+[2024-11-30 13:32:08] [INFO] Retrieved default course ID: 1
+[2024-11-30 13:32:08] [INFO] Created new word of the day: please
+[2024-11-30 13:32:17] [INFO] Database connection established successfully
+[2024-11-30 13:32:17] [INFO] Database connection established successfully
+[2024-11-30 13:32:17] [INFO] Retrieved existing word of the day: please
+[2024-11-30 13:32:37] [INFO] Database connection established successfully
+[2024-11-30 13:32:37] [INFO] Database connection established successfully
+[2024-11-30 13:32:37] [INFO] Retrieved existing word of the day: please
+[2024-11-30 13:32:51] [INFO] Database connection established successfully
+[2024-11-30 13:32:51] [INFO] Database connection established successfully
+[2024-11-30 13:32:51] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:17:48] [INFO] Database connection established successfully
+[2024-11-30 15:17:48] [INFO] Database connection established successfully
+[2024-11-30 15:17:48] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:21:49] [INFO] Database connection established successfully
+[2024-11-30 15:21:49] [INFO] Database connection established successfully
+[2024-11-30 15:21:49] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:21:53] [INFO] Database connection established successfully
+[2024-11-30 15:21:53] [INFO] Database connection established successfully
+[2024-11-30 15:21:53] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:21:54] [INFO] Database connection established successfully
+[2024-11-30 15:21:54] [INFO] Database connection established successfully
+[2024-11-30 15:21:54] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:21:57] [INFO] Database connection established successfully
+[2024-11-30 15:21:57] [INFO] Database connection established successfully
+[2024-11-30 15:21:57] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:22:11] [INFO] Database connection established successfully
+[2024-11-30 15:22:11] [INFO] Database connection established successfully
+[2024-11-30 15:22:11] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:25:15] [INFO] Database connection established successfully
+[2024-11-30 15:25:15] [INFO] Database connection established successfully
+[2024-11-30 15:25:15] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:26:39] [INFO] Database connection established successfully
+[2024-11-30 15:26:39] [INFO] Database connection established successfully
+[2024-11-30 15:26:39] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:53:19] [INFO] Database connection established successfully
+[2024-11-30 15:53:19] [INFO] Database connection established successfully
+[2024-11-30 15:53:19] [INFO] Making API request for word: please
+[2024-11-30 15:53:20] [INFO] Retrieved default course ID: 1
+[2024-11-30 15:53:20] [INFO] Translation cached successfully for word: please
+[2024-11-30 15:53:20] [INFO] Successfully translated: please to veuillez
+[2024-11-30 15:53:20] [INFO] Retrieved default course ID: 1
+[2024-11-30 15:53:20] [INFO] Created new word of the day: please
+[2024-11-30 15:53:34] [INFO] Database connection established successfully
+[2024-11-30 15:53:34] [INFO] Database connection established successfully
+[2024-11-30 15:53:34] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:56:36] [INFO] Database connection established successfully
+[2024-11-30 15:56:36] [INFO] Database connection established successfully
+[2024-11-30 15:56:36] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:56:38] [INFO] Database connection established successfully
+[2024-11-30 15:56:38] [INFO] Database connection established successfully
+[2024-11-30 15:56:38] [INFO] Retrieved existing word of the day: please
+[2024-11-30 15:56:44] [INFO] Database connection established successfully
+[2024-11-30 15:56:44] [INFO] Database connection established successfully
+[2024-11-30 15:56:44] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:03:46] [INFO] Database connection established successfully
+[2024-11-30 16:03:46] [INFO] Database connection established successfully
+[2024-11-30 16:03:46] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:08:53] [INFO] Database connection established successfully
+[2024-11-30 16:08:53] [INFO] Database connection established successfully
+[2024-11-30 16:08:53] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:08:56] [INFO] Database connection established successfully
+[2024-11-30 16:08:56] [INFO] Database connection established successfully
+[2024-11-30 16:08:56] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:13:54] [INFO] Database connection established successfully
+[2024-11-30 16:13:54] [INFO] Database connection established successfully
+[2024-11-30 16:13:54] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:13:56] [INFO] Database connection established successfully
+[2024-11-30 16:13:56] [INFO] Database connection established successfully
+[2024-11-30 16:13:57] [INFO] Database connection established successfully
+[2024-11-30 16:13:57] [INFO] Database connection established successfully
+[2024-11-30 16:13:57] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:14:45] [INFO] Database connection established successfully
+[2024-11-30 16:14:45] [INFO] Database connection established successfully
+[2024-11-30 16:14:45] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:16:02] [INFO] Database connection established successfully
+[2024-11-30 16:16:02] [INFO] Database connection established successfully
+[2024-11-30 16:16:02] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:16:06] [INFO] Database connection established successfully
+[2024-11-30 16:16:06] [INFO] Database connection established successfully
+[2024-11-30 16:16:06] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:16:08] [INFO] Database connection established successfully
+[2024-11-30 16:16:08] [INFO] Database connection established successfully
+[2024-11-30 16:16:08] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:16:10] [INFO] Database connection established successfully
+[2024-11-30 16:16:10] [INFO] Database connection established successfully
+[2024-11-30 16:16:15] [INFO] Database connection established successfully
+[2024-11-30 16:16:15] [INFO] Database connection established successfully
+[2024-11-30 16:16:15] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:17:00] [INFO] Database connection established successfully
+[2024-11-30 16:17:00] [INFO] Database connection established successfully
+[2024-11-30 16:17:00] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:18:57] [INFO] Database connection established successfully
+[2024-11-30 16:18:57] [INFO] Database connection established successfully
+[2024-11-30 16:18:57] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:18:58] [INFO] Database connection established successfully
+[2024-11-30 16:18:58] [INFO] Database connection established successfully
+[2024-11-30 16:18:58] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:09] [INFO] Database connection established successfully
+[2024-11-30 16:21:09] [INFO] Database connection established successfully
+[2024-11-30 16:21:09] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:11] [INFO] Database connection established successfully
+[2024-11-30 16:21:11] [INFO] Database connection established successfully
+[2024-11-30 16:21:11] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:14] [INFO] Database connection established successfully
+[2024-11-30 16:21:14] [INFO] Database connection established successfully
+[2024-11-30 16:21:14] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:29] [INFO] Database connection established successfully
+[2024-11-30 16:21:29] [INFO] Database connection established successfully
+[2024-11-30 16:21:29] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:30] [INFO] Database connection established successfully
+[2024-11-30 16:21:32] [INFO] Database connection established successfully
+[2024-11-30 16:21:32] [INFO] Database connection established successfully
+[2024-11-30 16:21:32] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:21:33] [INFO] Database connection established successfully
+[2024-11-30 16:21:35] [INFO] Database connection established successfully
+[2024-11-30 16:21:35] [INFO] Database connection established successfully
+[2024-11-30 16:21:35] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:23:21] [INFO] Database connection established successfully
+[2024-11-30 16:23:27] [INFO] Database connection established successfully
+[2024-11-30 16:23:27] [INFO] Database connection established successfully
+[2024-11-30 16:23:27] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:23:29] [INFO] Database connection established successfully
+[2024-11-30 16:26:39] [INFO] Database connection established successfully
+[2024-11-30 16:26:39] [INFO] Database connection established successfully
+[2024-11-30 16:26:39] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:26:40] [INFO] Database connection established successfully
+[2024-11-30 16:26:40] [INFO] Database connection established successfully
+[2024-11-30 16:26:45] [INFO] Database connection established successfully
+[2024-11-30 16:26:45] [INFO] Database connection established successfully
+[2024-11-30 16:26:45] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:26:46] [INFO] Database connection established successfully
+[2024-11-30 16:26:46] [INFO] Database connection established successfully
+[2024-11-30 16:26:49] [INFO] Database connection established successfully
+[2024-11-30 16:26:49] [INFO] Database connection established successfully
+[2024-11-30 16:26:49] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:27:03] [INFO] Database connection established successfully
+[2024-11-30 16:27:03] [INFO] Database connection established successfully
+[2024-11-30 16:27:08] [INFO] Database connection established successfully
+[2024-11-30 16:27:08] [INFO] Database connection established successfully
+[2024-11-30 16:27:08] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:27:10] [INFO] Database connection established successfully
+[2024-11-30 16:27:10] [INFO] Database connection established successfully
+[2024-11-30 16:27:11] [INFO] Database connection established successfully
+[2024-11-30 16:27:11] [INFO] Database connection established successfully
+[2024-11-30 16:27:11] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:27:12] [INFO] Database connection established successfully
+[2024-11-30 16:27:12] [INFO] Database connection established successfully
+[2024-11-30 16:29:15] [INFO] Database connection established successfully
+[2024-11-30 16:29:15] [INFO] Database connection established successfully
+[2024-11-30 16:29:17] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:17] [INFO] Translation cached successfully for word: hello
+[2024-11-30 16:29:18] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:18] [INFO] Translation cached successfully for word: thank you
+[2024-11-30 16:29:18] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:29:20] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:20] [INFO] Translation cached successfully for word: goodbye
+[2024-11-30 16:29:21] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:21] [INFO] Translation cached successfully for word: yes
+[2024-11-30 16:29:22] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:22] [INFO] Translation cached successfully for word: no
+[2024-11-30 16:29:23] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:23] [INFO] Translation cached successfully for word: good morning
+[2024-11-30 16:29:24] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:24] [INFO] Translation cached successfully for word: good evening
+[2024-11-30 16:29:24] [INFO] Database connection established successfully
+[2024-11-30 16:29:24] [INFO] Database connection established successfully
+[2024-11-30 16:29:24] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:29:26] [INFO] Database connection established successfully
+[2024-11-30 16:29:26] [INFO] Database connection established successfully
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: hello
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: thank you
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: goodbye
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: yes
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: no
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: good morning
+[2024-11-30 16:29:26] [INFO] Retrieved cached translation for: good evening
+[2024-11-30 16:29:30] [INFO] Database connection established successfully
+[2024-11-30 16:29:30] [INFO] Database connection established successfully
+[2024-11-30 16:29:30] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:29:31] [INFO] Database connection established successfully
+[2024-11-30 16:29:31] [INFO] Database connection established successfully
+[2024-11-30 16:29:32] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:32] [INFO] Translation cached successfully for word: tomorrow
+[2024-11-30 16:29:33] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:33] [INFO] Translation cached successfully for word: yesterday
+[2024-11-30 16:29:34] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:34] [INFO] Translation cached successfully for word: perhaps
+[2024-11-30 16:29:35] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:35] [INFO] Translation cached successfully for word: always
+[2024-11-30 16:29:36] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:36] [INFO] Translation cached successfully for word: never
+[2024-11-30 16:29:37] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:37] [INFO] Translation cached successfully for word: sometimes
+[2024-11-30 16:29:38] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:38] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:39] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:39] [INFO] Translation cached successfully for word: often
+[2024-11-30 16:29:39] [INFO] Database connection established successfully
+[2024-11-30 16:29:39] [INFO] Database connection established successfully
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:39] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:40] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:40] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:40] [INFO] Database connection established successfully
+[2024-11-30 16:29:40] [INFO] Database connection established successfully
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:40] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:41] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:41] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:41] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:48] [INFO] Database connection established successfully
+[2024-11-30 16:29:48] [INFO] Database connection established successfully
+[2024-11-30 16:29:48] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:29:49] [INFO] Database connection established successfully
+[2024-11-30 16:29:49] [INFO] Database connection established successfully
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: hello
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: thank you
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: goodbye
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: yes
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: no
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: good morning
+[2024-11-30 16:29:49] [INFO] Retrieved cached translation for: good evening
+[2024-11-30 16:29:50] [INFO] Database connection established successfully
+[2024-11-30 16:29:50] [INFO] Database connection established successfully
+[2024-11-30 16:29:50] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:29:51] [INFO] Database connection established successfully
+[2024-11-30 16:29:51] [INFO] Database connection established successfully
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:51] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:52] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:52] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:52] [INFO] Database connection established successfully
+[2024-11-30 16:29:52] [INFO] Database connection established successfully
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:52] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:53] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:53] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:53] [INFO] Database connection established successfully
+[2024-11-30 16:29:53] [INFO] Database connection established successfully
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:53] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:54] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:54] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:54] [INFO] Database connection established successfully
+[2024-11-30 16:29:54] [INFO] Database connection established successfully
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:54] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:55] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:55] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:55] [INFO] Database connection established successfully
+[2024-11-30 16:29:55] [INFO] Database connection established successfully
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:55] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:56] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:56] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:56] [INFO] Database connection established successfully
+[2024-11-30 16:29:56] [INFO] Database connection established successfully
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:56] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:57] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:57] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:57] [INFO] Database connection established successfully
+[2024-11-30 16:29:57] [INFO] Database connection established successfully
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:29:57] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:29:58] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:29:58] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:29:58] [INFO] Database connection established successfully
+[2024-11-30 16:29:58] [INFO] Database connection established successfully
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: hello
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: thank you
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: goodbye
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: yes
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: no
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: good morning
+[2024-11-30 16:29:58] [INFO] Retrieved cached translation for: good evening
+[2024-11-30 16:29:59] [INFO] Database connection established successfully
+[2024-11-30 16:29:59] [INFO] Database connection established successfully
+[2024-11-30 16:29:59] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:30:00] [INFO] Database connection established successfully
+[2024-11-30 16:30:00] [INFO] Database connection established successfully
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:30:00] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:30:01] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:30:01] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:30:01] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:30:03] [INFO] Database connection established successfully
+[2024-11-30 16:30:03] [INFO] Database connection established successfully
+[2024-11-30 16:30:03] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:30:04] [INFO] Database connection established successfully
+[2024-11-30 16:30:04] [INFO] Database connection established successfully
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: hello
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: thank you
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: goodbye
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: yes
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: no
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: good morning
+[2024-11-30 16:30:04] [INFO] Retrieved cached translation for: good evening
+[2024-11-30 16:30:05] [INFO] Database connection established successfully
+[2024-11-30 16:30:05] [INFO] Database connection established successfully
+[2024-11-30 16:30:05] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:30:06] [INFO] Database connection established successfully
+[2024-11-30 16:30:06] [INFO] Database connection established successfully
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:30:06] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:30:06] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:30:06] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:30:57] [INFO] Database connection established successfully
+[2024-11-30 16:30:57] [INFO] Database connection established successfully
+[2024-11-30 16:30:57] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:30:58] [INFO] Database connection established successfully
+[2024-11-30 16:30:58] [INFO] Database connection established successfully
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:30:58] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:30:59] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:30:59] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:30:59] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:31:00] [INFO] Database connection established successfully
+[2024-11-30 16:31:00] [INFO] Database connection established successfully
+[2024-11-30 16:31:00] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:31:01] [INFO] Database connection established successfully
+[2024-11-30 16:31:01] [INFO] Database connection established successfully
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: hello
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: thank you
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: please
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: goodbye
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: yes
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: no
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: good morning
+[2024-11-30 16:31:01] [INFO] Retrieved cached translation for: good evening
+[2024-11-30 16:31:02] [INFO] Database connection established successfully
+[2024-11-30 16:31:02] [INFO] Database connection established successfully
+[2024-11-30 16:31:02] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:31:03] [INFO] Database connection established successfully
+[2024-11-30 16:31:03] [INFO] Database connection established successfully
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: tomorrow
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: yesterday
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: perhaps
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: always
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: never
+[2024-11-30 16:31:03] [INFO] Retrieved cached translation for: sometimes
+[2024-11-30 16:31:04] [INFO] Retrieved default course ID: 1
+[2024-11-30 16:31:04] [ERROR] Cache translation failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'translation' at row 1
+[2024-11-30 16:31:04] [INFO] Retrieved cached translation for: often
+[2024-11-30 16:31:09] [INFO] Database connection established successfully
+[2024-11-30 16:31:09] [INFO] Database connection established successfully
+[2024-11-30 16:31:09] [INFO] Retrieved existing word of the day: please
+[2024-11-30 16:44:36] [INFO] Database connection established successfully
+[2024-11-30 16:44:36] [INFO] Database connection established successfully
+[2024-11-30 16:46:37] [INFO] Database connection established successfully
+[2024-11-30 16:46:37] [INFO] Database connection established successfully
+[2024-11-30 16:46:40] [INFO] Database connection established successfully
+[2024-11-30 16:46:40] [INFO] Database connection established successfully
+[2024-11-30 16:47:16] [INFO] Database connection established successfully
+[2024-11-30 16:47:16] [INFO] Database connection established successfully
+[2024-11-30 16:47:17] [INFO] Database connection established successfully
+[2024-11-30 16:47:17] [INFO] Database connection established successfully
+[2024-11-30 16:49:49] [INFO] Database connection established successfully
+[2024-11-30 16:49:49] [INFO] Database connection established successfully
+[2024-11-30 16:49:51] [INFO] Database connection established successfully
+[2024-11-30 16:49:51] [INFO] Database connection established successfully
+[2024-11-30 16:49:54] [INFO] Database connection established successfully
+[2024-11-30 16:49:54] [INFO] Database connection established successfully
+[2024-11-30 16:49:55] [INFO] Database connection established successfully
+[2024-11-30 16:49:55] [INFO] Database connection established successfully
+[2024-11-30 16:51:33] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb
+[2024-11-30 16:51:33] [INFO] Database connection established successfully
+[2024-11-30 16:51:33] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb
+[2024-11-30 16:51:33] [INFO] Database connection established successfully
+[2024-11-30 16:53:53] [INFO] Database connection established successfully
+[2024-11-30 16:53:53] [INFO] Database connection established successfully
+[2024-11-30 16:58:38] [INFO] Database connection established successfully
+[2024-11-30 16:58:38] [INFO] Database connection established successfully
+[2024-11-30 16:59:14] [INFO] Database connection established successfully
+[2024-11-30 16:59:14] [INFO] Database connection established successfully
+[2024-11-30 17:03:43] [INFO] Database connection established successfully
+[2024-11-30 17:03:45] [INFO] Login attempt initiated
+[2024-11-30 17:03:45] [INFO] Database connection established successfully
+[2024-11-30 17:03:45] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 18:04:41] [INFO] Database connection established successfully
+[2024-11-30 18:05:33] [INFO] Database connection established successfully
+[2024-11-30 18:09:14] [INFO] Database connection established successfully
+[2024-11-30 18:09:43] [INFO] Database connection established successfully
+[2024-11-30 18:11:43] [INFO] Database connection established successfully
+[2024-11-30 18:33:54] [INFO] Database connection established successfully
+[2024-11-30 19:20:25] [INFO] Database connection established successfully
+[2024-11-30 19:20:25] [INFO] Database connection established successfully
+[2024-11-30 19:20:25] [INFO] Database connection established successfully
+[2024-11-30 19:20:25] [INFO] Database connection established successfully
+[2024-11-30 19:20:25] [INFO] Database connection established successfully
+[2024-11-30 19:21:51] [INFO] Database connection established successfully
+[2024-11-30 19:21:51] [INFO] Database connection established successfully
+[2024-11-30 19:21:51] [INFO] Database connection established successfully
+[2024-11-30 19:21:51] [INFO] Database connection established successfully
+[2024-11-30 19:21:51] [INFO] Database connection established successfully
+[2024-11-30 19:23:14] [INFO] Database connection established successfully
+[2024-11-30 19:23:14] [INFO] Database connection established successfully
+[2024-11-30 19:23:14] [INFO] Database connection established successfully
+[2024-11-30 19:23:14] [INFO] Database connection established successfully
+[2024-11-30 19:23:14] [INFO] Database connection established successfully
+[2024-11-30 19:23:49] [INFO] Database connection established successfully
+[2024-11-30 19:23:49] [INFO] Database connection established successfully
+[2024-11-30 19:23:49] [INFO] Database connection established successfully
+[2024-11-30 19:23:49] [INFO] Database connection established successfully
+[2024-11-30 19:23:49] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:23:52] [INFO] Database connection established successfully
+[2024-11-30 19:34:47] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb;charset=utf8mb4
+[2024-11-30 19:34:47] [INFO] Database connection established successfully
+[2024-11-30 19:35:32] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb;charset=utf8mb4
+[2024-11-30 19:35:32] [INFO] Database connection established successfully
+[2024-11-30 19:35:32] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb;charset=utf8mb4
+[2024-11-30 19:35:32] [INFO] Database connection established successfully
+[2024-11-30 19:35:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:35:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:35:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:36:19] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb;charset=utf8mb4
+[2024-11-30 19:36:19] [INFO] Database connection established successfully
+[2024-11-30 19:36:19] [INFO] Attempting to connect to database with DSN: mysql:host=localhost;dbname=litdb;charset=utf8mb4
+[2024-11-30 19:36:19] [INFO] Database connection established successfully
+[2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
