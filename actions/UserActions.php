@@ -1,13 +1,14 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../php/functions.php';
+require_once __DIR__ . '/../php/LogHandler.php';
 
 class UserActions {
     private $conn;
+    private $logger;
 
     public function __construct() {
-        $database = new Database();
-        $this->conn = $database->getConnection();
+        $this->conn = Database::getInstance()->getConnection();
+        $this->logger = new LogHandler();
     }
 
     public function register($firstName, $lastName, $email, $password) {
@@ -42,7 +43,7 @@ class UserActions {
         try {
             $stmt = $this->conn->prepare("SELECT id, firstName, lastName, password FROM users WHERE email = ?");
             $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user = $stmt->fetch();
 
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user_id'] = $user['id'];
@@ -52,6 +53,7 @@ class UserActions {
 
             return ['success' => false, 'message' => 'Invalid email or password'];
         } catch (PDOException $e) {
+            $this->logger->error("Login error: " . $e->getMessage());
             return ['success' => false, 'message' => 'Login failed: ' . $e->getMessage()];
         }
     }
@@ -76,6 +78,7 @@ class UserActions {
             $stmt->execute([$userId]);
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
+            $this->logger->error("Get user profile error: " . $e->getMessage());
             return null;
         }
     }

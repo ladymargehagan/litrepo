@@ -1,29 +1,30 @@
 <?php
-require_once __DIR__ . '/../config/api_config.php';
 require_once __DIR__ . '/../utils/Cache.php';
-require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../utils/APIClient.php';
+require_once __DIR__ . '/../php/LogHandler.php';
+require_once __DIR__ . '/../config/api_config.php';
+require_once __DIR__ . '/../config/database.php';
 
 class TranslateAPI {
     private $cache;
-    private $db;
     private $apiClient;
-    
+    private $logger;
+    private $db;
+
     public function __construct() {
-        if (ENABLE_CACHE) {
-            $this->cache = new Cache();
-        }
-        $this->db = Database::getInstance();
+        $this->cache = new Cache();
         $this->apiClient = new APIClient();
+        $this->logger = new LogHandler();
+        $this->db = Database::getInstance();
     }
 
     public function getWordOfDay() {
         $conn = $this->db->getConnection();
         $today = date('Y-m-d');
-        $cacheKey = CACHE_PREFIX . 'word_of_day_' . $today;
+        $cacheKey = 'word_of_day_' . $today;
         
         // Check cache first
-        if (ENABLE_CACHE && $this->cache->exists($cacheKey)) {
+        if ($this->cache->exists($cacheKey)) {
             return $this->cache->get($cacheKey);
         }
         
@@ -33,6 +34,7 @@ class TranslateAPI {
                 SELECT w.*, t.translation 
                 FROM word_of_day wd
                 JOIN words w ON wd.wordId = w.wordId
+                LEFT JOIN translations t ON w.wordId = t.wordId
                 WHERE DATE(wd.dateShown) = ?
             ");
             $stmt->execute([$today]);
@@ -40,27 +42,25 @@ class TranslateAPI {
 
             if ($word) {
                 $result = $this->enrichWordData($word);
-                if (ENABLE_CACHE) {
-                    $this->cache->set($cacheKey, $result, 24 * 60 * 60);
-                }
+                $this->cache->set($cacheKey, $result, 24 * 60 * 60);
                 return $result;
             }
 
-            // Get a new random word from the API
+            // Get a new random word
             $randomWord = $this->getRandomWord();
             if (!$randomWord) {
                 throw new Exception("Failed to get random word");
             }
 
-            // Store the word and its translation
+            // Store the new word
             $stmt = $conn->prepare("
                 INSERT INTO words (word, sourceLanguage, targetLanguage, translation)
                 VALUES (?, ?, ?, ?)
             ");
             $stmt->execute([
                 $randomWord['word'],
-                SOURCE_LANG,
-                DEFAULT_TARGET_LANG,
+                'en',
+                'fr',
                 $randomWord['translation']
             ]);
             
@@ -73,13 +73,11 @@ class TranslateAPI {
             ");
             $stmt->execute([$wordId, $today]);
 
-            if (ENABLE_CACHE) {
-                $this->cache->set($cacheKey, $randomWord, 24 * 60 * 60);
-            }
+            $this->cache->set($cacheKey, $randomWord, 24 * 60 * 60);
             return $randomWord;
 
         } catch (Exception $e) {
-            error_log("Error in getWordOfDay: " . $e->getMessage());
+            $this->logger->error("Error in getWordOfDay: " . $e->getMessage());
             return null;
         }
     }
@@ -87,7 +85,7 @@ class TranslateAPI {
     private function getRandomWord() {
         try {
             // First try to get a random word from our database
-            $conn = $this->db->getConnection();
+            $conn = $this->db->ensureConnection();
             $stmt = $conn->prepare("
                 SELECT w.* 
                 FROM words w 
@@ -106,46 +104,40 @@ class TranslateAPI {
                 ];
             }
 
-            // If no words in database, try API
-            $url = sprintf(DICTIONARY_API_ENDPOINT . 'en/random');
-            $context = stream_context_create(['http' => [
-                'timeout' => 5,
-                'header' => 'User-Agent: PHP'
-            ]]);
-            
-            $response = @file_get_contents($url, false, $context);
+            // If no words in database, use Wordnik API
+            $url = 'https://api.wordnik.com/v4/words.json/randomWord?' . http_build_query([
+                'api_key' => WORDS_API_KEY,
+                'hasDictionaryDef' => 'true',
+                'minCorpusCount' => '5000',
+                'maxCorpusCount' => '-1',
+                'minDictionaryCount' => '3',
+                'maxDictionaryCount' => '-1',
+                'minLength' => '3',
+                'maxLength' => '12',
+                'includePartOfSpeech' => 'noun,verb,adjective,adverb'
+            ]);
+
+            $response = $this->apiClient->request($url);
             
             if (!$response) {
-                error_log("API Error: Failed to get random word from " . $url);
-                // Fallback to a basic word if API fails
-                return [
-                    'word' => 'hello',
-                    'translation' => 'bonjour',
-                    'definition' => [['partOfSpeech' => 'exclamation', 'definitions' => [['definition' => 'Used as a greeting']]]]
-                ];
-            }
-
-            $data = json_decode($response, true);
-            if (empty($data)) {
-                error_log("API Error: Empty response from dictionary API");
+                $this->logger->error("API Error: Failed to get random word");
                 return null;
             }
 
-            $word = $data[0]['word'];
-            $translation = $this->translateWord($word, DEFAULT_TARGET_LANG);
-
-            if (!$translation) {
-                error_log("API Error: Failed to translate word: " . $word);
+            $data = json_decode($response, true);
+            if (empty($data) || !isset($data['word'])) {
+                $this->logger->error("API Error: Invalid response format from dictionary API");
                 return null;
             }
 
             return [
-                'word' => $word,
-                'translation' => $translation,
-                'definition' => $this->formatDefinition($data)
+                'word' => $data['word'],
+                'translation' => null, // Will be set later
+                'definition' => $this->getDefinitions($data['word'])
             ];
+
         } catch (Exception $e) {
-            error_log("Error in getRandomWord: " . $e->getMessage());
+            $this->logger->error("Error in getRandomWord: " . $e->getMessage());
             return null;
         }
     }
@@ -324,5 +316,64 @@ class TranslateAPI {
         
         return $formatted;
     }
+
+    public function populateWordsForCourse($courseId, $count = 100) {
+        try {
+            $course = $this->getCourseLanguage($courseId);
+            if (!$course) {
+                throw new Exception("Course not found");
+            }
+
+            $wordsAdded = 0;
+            while ($wordsAdded < $count) {
+                $randomWord = $this->getRandomWord();
+                if (!$randomWord || !isset($randomWord['word'])) {
+                    continue;
+                }
+
+                $translation = $this->translateWord($randomWord['word'], $course['language']);
+                if (!$translation) {
+                    continue;
+                }
+
+                // Insert into words table
+                $stmt = $this->db->getConnection()->prepare("
+                    INSERT INTO words (word, sourceLanguage, targetLanguage, translation, courseId, category, difficulty)
+                    VALUES (?, ?, ?, ?, ?, 'general', 'medium')
+                    ON DUPLICATE KEY UPDATE translation = VALUES(translation)
+                ");
+
+                $stmt->execute([
+                    $randomWord['word'],
+                    'en',
+                    strtolower($course['language']),
+                    $translation,
+                    $courseId
+                ]);
+
+                $wordsAdded++;
+                $this->logger->info("Added word {$wordsAdded}/{$count}: {$randomWord['word']} -> {$translation}");
+                
+                // Respect API rate limits
+                sleep(1);
+            }
+
+            return true;
+        } catch (Exception $e) {
+            $this->logger->error("Error populating words: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    private function getCourseLanguage($courseId) {
+        $stmt = $this->db->getConnection()->prepare("
+            SELECT language FROM courses WHERE courseId = ?
+        ");
+        $stmt->execute([$courseId]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
+
+$translateAPI = new TranslateAPI();
+$translateAPI->populateWordsForCourse(1, 100); // Populate 100 words for course ID 1
 ?> 

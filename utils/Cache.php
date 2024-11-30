@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../php/LogHandler.php';
+
 class Cache {
     private $cacheDir;
     private $logger;
@@ -36,35 +38,30 @@ class Cache {
 
     public function get($key) {
         $filename = $this->cacheDir . md5($key);
-        if (!file_exists($filename)) {
-            return null;
-        }
-        
         try {
-            $content = file_get_contents($filename);
-            $data = unserialize($content);
-            
-            if ($data['expires'] < time()) {
-                unlink($filename);
+            if (!$this->exists($key)) {
                 return null;
             }
             
+            $content = file_get_contents($filename);
+            $data = unserialize($content);
             return $data['value'];
         } catch (Exception $e) {
-            $this->logger->error("Cache retrieval failed: " . $e->getMessage());
+            $this->logger->error("Cache get failed: " . $e->getMessage());
             return null;
         }
     }
 
-    public function set($key, $value, $duration = 3600) {
+    public function set($key, $value, $ttl = 3600) {
+        $filename = $this->cacheDir . md5($key);
         try {
-            $filename = $this->cacheDir . md5($key);
             $data = [
                 'value' => $value,
-                'expires' => time() + $duration
+                'expires' => time() + $ttl
             ];
             
-            return file_put_contents($filename, serialize($data), LOCK_EX);
+            file_put_contents($filename, serialize($data));
+            return true;
         } catch (Exception $e) {
             $this->logger->error("Cache set failed: " . $e->getMessage());
             return false;
@@ -77,5 +74,14 @@ class Cache {
             return unlink($filename);
         }
         return true;
+    }
+
+    public function clear() {
+        $files = glob($this->cacheDir . '*');
+        foreach ($files as $file) {
+            if (is_file($file)) {
+                unlink($file);
+            }
+        }
     }
 } 

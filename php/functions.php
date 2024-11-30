@@ -1,12 +1,13 @@
 <?php
-// Create and set custom session directory
+require_once __DIR__ . '/../config/database.php';
+
+// Session configuration
 $sessionPath = __DIR__ . '/../temp/sessions';
 if (!file_exists($sessionPath)) {
     mkdir($sessionPath, 0777, true);
 }
 session_save_path($sessionPath);
 
-// Add security enhancements
 session_set_cookie_params([
     'lifetime' => 3600,
     'path' => '/',
@@ -18,6 +19,11 @@ session_set_cookie_params([
 
 session_start();
 
+function getDatabaseConnection() {
+    return Database::getInstance()->getConnection();
+}
+
+// Authentication functions
 function isLoggedIn() {
     return isset($_SESSION['user_id']);
 }
@@ -29,6 +35,7 @@ function requireLogin() {
     }
 }
 
+// Input handling functions
 function sanitizeInput($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -48,6 +55,7 @@ function validatePassword($password) {
            preg_match('/[0-9]/', $password);
 }
 
+// Progress tracking functions
 function getProgressPercentage($wordsLearned, $totalWords) {
     if ($totalWords == 0) return 0;
     return min(100, round(($wordsLearned / $totalWords) * 100));
@@ -64,6 +72,7 @@ function getUserLevel($totalScore) {
     return "Expert";
 }
 
+// Flash message functions
 function flashMessage($message, $type = 'info') {
     $_SESSION['flash'] = [
         'message' => $message,

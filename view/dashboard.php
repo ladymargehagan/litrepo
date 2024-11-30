@@ -1,8 +1,11 @@
-<?php 
-include 'header.php';
+<?php
+require_once __DIR__ . '/../php/functions.php';
 require_once __DIR__ . '/../actions/TranslateAPI.php';
 require_once __DIR__ . '/../actions/CourseActions.php';
+require_once __DIR__ . '/../php/LogHandler.php';
+include 'header.php';
 
+// Ensure user is logged in
 requireLogin();
 
 $translateAPI = new TranslateAPI();
@@ -15,15 +18,14 @@ $wordOfDay = $translateAPI->getWordOfDay();
 $userCourses = [];
 $enrolledCourses = [];
 $availableCourses = $courseActions->getAllCourses();
-$totalWordsLearned = 0;
 
 // Get progress for enrolled courses
 foreach ($availableCourses as $course) {
     $progress = $courseActions->getUserProgress($_SESSION['user_id'], $course['courseId']);
     if ($progress) {
-        $totalWordsLearned += $progress['wordsLearned'];
-        $userCourses[$course['courseId']] = array_merge($course, ['progress' => $progress]);
-        $enrolledCourses[] = array_merge($course, ['progress' => $progress]);
+        $totalWordsLearned += (int)($progress['wordsLearned'] ?? 0);
+        $course['progress'] = $progress;
+        $enrolledCourses[] = $course;
     }
 }
 
@@ -32,21 +34,6 @@ $userLevel = getUserLevel($totalWordsLearned);
 ?>
 
 <div class="dashboard-container">
-    <!-- User Progress Summary -->
-    <div class="progress-summary">
-        <h2>Your Progress</h2>
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-label">Level</span>
-                <span class="stat-value"><?php echo htmlspecialchars($userLevel); ?></span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Words Learned</span>
-                <span class="stat-value"><?php echo $totalWordsLearned; ?></span>
-            </div>
-        </div>
-    </div>
-
     <!-- Word of the Day Section -->
     <div class="word-of-day">
         <h2>Word of the Day</h2>
@@ -88,21 +75,36 @@ $userLevel = getUserLevel($totalWordsLearned);
             <div class="course-grid">
                 <?php foreach ($enrolledCourses as $course): ?>
                     <div class="course-card">
-                        <h3><?php echo htmlspecialchars($course['name']); ?></h3>
+                        <h3><?php echo htmlspecialchars($course['courseName']); ?></h3>
                         <div class="progress-bar">
-                            <div class="progress" style="width: <?php echo getProgressPercentage($course['progress']['wordsLearned'], $course['totalWords']); ?>%"></div>
+                            <div class="progress" style="width: <?php echo getProgressPercentage($course['progress']['wordsLearned'] ?? 0, $course['totalWords'] ?? 0); ?>%"></div>
                         </div>
                         <p class="progress-text">
-                            <?php echo $course['progress']['wordsLearned']; ?> / <?php echo $course['totalWords']; ?> words
+                            <?php echo $course['progress']['wordsLearned'] ?? 0; ?> / <?php echo $course['totalWords'] ?? 0; ?> words
                         </p>
                         <a href="course.php?id=<?php echo $course['courseId']; ?>" class="continue-btn">Continue Learning</a>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
+    <?php else: ?>
+        <div class="no-courses">
+            <p>You haven't enrolled in any courses yet.</p
+        </div>
+
+        <!-- available courses -->
+        <div class="available-courses">
+            <h2>Available Courses</h2>
+            <div class="course-grid">
+                <?php foreach ($availableCourses as $course): ?> 
+                    <div class="course-card">
+                        <h3><?php echo htmlspecialchars($course['courseName']); ?></h3>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
     <?php endif; ?>
 </div>
-
 
 <?php include 'footer.php'; ?>
 

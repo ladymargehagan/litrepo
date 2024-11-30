@@ -515,3 +515,124 @@
 [2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
 [2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
 [2024-11-30 19:36:19] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 19:59:59] [INFO] Login attempt initiated
+[2024-11-30 19:59:59] [INFO] Successful login for user: margenana@home.com
+[2024-11-30 20:04:23] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:04:23] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:04:23] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:28] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:28] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:28] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:32] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:40] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:40] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:40] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:06:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:08:41] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:08:41] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:08:41] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:45] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:45] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:45] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:47] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:47] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:47] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:55] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:55] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:55] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:09:58] [ERROR] Error getting user progress: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'litdb.learned_words' doesn't exist
+[2024-11-30 20:20:18] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:18] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:18] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:20:27] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:27] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:27] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:20:33] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:33] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:33] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:20:39] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:39] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:39] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:20:47] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:47] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:47] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:20:54] [ERROR] API request failed: API error: 403
+[2024-11-30 20:20:54] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:20:54] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:00] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:00] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:00] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:06] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:06] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:06] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:12] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:12] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:12] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:19] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:19] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:19] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:24] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:24] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:24] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:30] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:30] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:30] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:36] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:36] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:36] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:42] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:42] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:42] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:21:49] [ERROR] API request failed: API error: 403
+[2024-11-30 20:21:49] [ERROR] Translation error: Translation API request failed
+[2024-11-30 20:21:49] [ERROR] Fallback translation lookup failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'word' in 'where clause'
+[2024-11-30 20:22:15] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:15] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:22] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:22] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:29] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:29] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:35] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:35] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:42] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:42] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:48] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:48] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:22:55] [ERROR] API request failed: API error: 401
+[2024-11-30 20:22:55] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:01] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:01] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:08] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:08] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:14] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:14] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:20] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:20] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:27] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:27] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:23:34] [ERROR] API request failed: API error: 401
+[2024-11-30 20:23:34] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:26] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:26] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:33] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:33] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:39] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:39] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:45] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:45] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:51] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:51] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:24:58] [ERROR] API request failed: API error: 401
+[2024-11-30 20:24:58] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:25:04] [ERROR] API request failed: API error: 401
+[2024-11-30 20:25:04] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:25:11] [ERROR] API request failed: API error: 401
+[2024-11-30 20:25:11] [ERROR] API Error: Failed to get random word
+[2024-11-30 20:25:18] [ERROR] API request failed: API error: 401
+[2024-11-30 20:25:18] [ERROR] API Error: Failed to get random word

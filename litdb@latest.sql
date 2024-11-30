@@ -37,14 +37,6 @@ CREATE TABLE `courses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`courseId`, `courseName`, `language`, `level`, `description`) VALUES
-(1, 'French Basics', 'French', 'Basics', 'Learn the fundamentals of French language including basic vocabulary and phrases'),
-(2, 'French Intermediate', 'French', 'Intermediate', 'Build upon basic French with more complex vocabulary and grammar'),
-(3, 'French Advanced', 'French', 'Advanced', 'Master advanced French concepts and become fluent in conversation');
-
 -- --------------------------------------------------------
 
 --
@@ -129,11 +121,12 @@ CREATE TABLE `words` (
 -- Table structure for table `word_of_day`
 --
 
-CREATE TABLE `word_of_day` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `wordId` int(11) NOT NULL,
-  `dateShown` date NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`)
+CREATE TABLE IF NOT EXISTS `word_of_day` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `wordId` INT NOT NULL,
+    `dateShown` DATE NOT NULL DEFAULT CURRENT_DATE,
+    FOREIGN KEY (`wordId`) REFERENCES `words`(`wordId`),
+    UNIQUE KEY `unique_date` (`dateShown`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -189,12 +182,6 @@ ALTER TABLE `words`
   ADD CONSTRAINT `words_ibfk_1` FOREIGN KEY (`courseId`) REFERENCES `courses` (`courseId`)
   ON DELETE SET NULL;
 
---
--- Constraints for table `word_of_day`
---
-ALTER TABLE `word_of_day`
-  ADD CONSTRAINT `word_of_day_ibfk_1` FOREIGN KEY (`wordId`) REFERENCES `words` (`wordId`),
-  ADD UNIQUE INDEX `unique_date` (`dateShown`);
 
 -- Add index for email as it's likely used for login
 ALTER TABLE `users` 
@@ -211,15 +198,16 @@ ALTER TABLE `user_enrollments`
   ADD CONSTRAINT `user_enrollments_ibfk_2` FOREIGN KEY (`courseId`) REFERENCES `courses` (`courseId`);
 
 -- These tables will store API responses for caching purposes
-CREATE TABLE `translations` (
-  `translationId` int(11) NOT NULL AUTO_INCREMENT,
-  `wordId` int(11) NOT NULL,
-  `translation` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `context` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
-  `expiresAt` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`translationId`),
-  KEY `wordId` (`wordId`)
+CREATE TABLE IF NOT EXISTS `translations` (
+    `translationId` INT NOT NULL AUTO_INCREMENT,
+    `wordId` INT NOT NULL,
+    `translation` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+    `context` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+    `createdAt` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+    `expiresAt` TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (`translationId`),
+    KEY `wordId` (`wordId`),
+    FOREIGN KEY (`wordId`) REFERENCES `words`(`wordId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `word_examples` (
@@ -232,7 +220,33 @@ CREATE TABLE `word_examples` (
   PRIMARY KEY (`exampleId`),
   KEY `wordId` (`wordId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-COMMIT;
+
+CREATE TABLE IF NOT EXISTS `learned_words` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `user_id` INT NOT NULL,
+    `word_id` INT NOT NULL,
+    `learned_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
+    FOREIGN KEY (`word_id`) REFERENCES `words`(`wordId`),
+    INDEX `idx_user_word` (`user_id`, `word_id`),
+    INDEX `idx_learned_date` (`learned_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Add index for faster lookups of learned words
+-- ALTER TABLE learned_words
+-- ADD INDEX idx_user_word (user_id, word_id),
+-- ADD INDEX idx_learned_date (learned_date);
+
+-- Add missing indexes if they don't exist
+CREATE INDEX IF NOT EXISTS `idx_word_course` ON `words` (`courseId`);
+CREATE INDEX IF NOT EXISTS `idx_word_languages` ON `words` (`sourceLanguage`, `targetLanguage`);
+
+
+-- Insert just French and Spanish basic courses
+INSERT INTO `courses` (`courseName`, `language`, `level`, `description`) VALUES
+('French', 'French', 'Basics', 'Learn the fundamentals of French language including basic vocabulary and phrases'),
+('Spanish', 'Spanish', 'Basics', 'Learn the fundamentals of Spanish language including basic vocabulary and phrases');
+
 
 
 

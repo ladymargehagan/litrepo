@@ -5,7 +5,7 @@ require_once 'UserActions.php';
 $userActions = new UserActions();
 $result = $userActions->logout();
 
-flashMessage('You have been logged out successfully', 'info');
+flashMessage($result['message'], $result['success'] ? 'info' : 'error');
 header('Location: ../view/login.php');
 exit();
 ?>
