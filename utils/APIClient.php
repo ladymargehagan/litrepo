@@ -47,6 +47,10 @@ class APIClient {
             'Connection: close'
         ];
         
+        if ($method === 'POST' && is_array($data)) {
+            $defaultHeaders[] = 'Content-Type: application/json';
+        }
+        
         $context = [
             'http' => [
                 'method' => $method,

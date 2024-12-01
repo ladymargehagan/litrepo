@@ -84,6 +84,11 @@ class TranslateAPI {
 
     private function getRandomWord() {
         try {
+            if (empty(WORDS_API_KEY)) {
+                $this->logger->error("Wordnik API key is not configured");
+                return null;
+            }
+            
             // First try to get a random word from our database
             $conn = $this->db->ensureConnection();
             $stmt = $conn->prepare("
@@ -160,39 +165,42 @@ class TranslateAPI {
         }
 
         try {
-            $url = sprintf(
-                '%s?auth_key=%s&text=%s&source_lang=%s&target_lang=%s',
-                TRANSLATE_API_ENDPOINT,
-                DEEP_L_API_KEY,
-                urlencode($word),
-                SOURCE_LANG,
-                $targetLang
+            $url = TRANSLATE_API_ENDPOINT;
+            
+            $data = [
+                'q' => $word,
+                'source' => 'en',
+                'target' => strtolower($targetLang),
+                'format' => 'text',
+                'alternatives' => 3
+            ];
+
+            $response = $this->apiClient->request(
+                $url, 
+                'POST', 
+                $data, 
+                ['Content-Type: application/json']
             );
 
-            $response = $this->apiClient->request($url);
             if (!$response) {
-                throw new Exception("Translation API request failed");
+                throw new Exception("Translation failed");
             }
 
-            $data = json_decode($response, true);
-            if (!isset($data['translations'][0]['text'])) {
-                throw new Exception("Invalid translation response format");
+            $result = json_decode($response, true);
+            if (!isset($result['translatedText'])) {
+                throw new Exception("Invalid translation response");
             }
 
-            $translation = $data['translations'][0]['text'];
-            
-            // Store in database for persistence
-            $this->storeTranslation($word, $translation, $targetLang);
-            
-            // Cache the result
-            if (ENABLE_CACHE) {
-                $this->cache->set($cacheKey, $translation, CACHE_DURATION);
+            // Store alternatives in cache if available
+            if (!empty($result['alternatives'])) {
+                $cacheKey = "trans_alt_{$word}_{$targetLang}";
+                $this->cache->set($cacheKey, $result['alternatives'], CACHE_DURATION);
             }
 
-            return $translation;
+            return $result['translatedText'];
         } catch (Exception $e) {
-            $this->logger->error("Translation error: " . $e->getMessage());
-            return $this->getFallbackTranslation($word);
+            $this->logger->error("Translation failed for word '{$word}': " . $e->getMessage());
+            return null;
         }
     }
 

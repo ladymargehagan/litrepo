@@ -1,12 +1,15 @@
 <?php
+require_once __DIR__ . '/env.php';
+
 // API Endpoints and Keys
-define('DICTIONARY_API_ENDPOINT', 'https://api.wordnik.com/v4/word.json/');
-define('TRANSLATE_API_ENDPOINT', 'https://api-free.deepl.com/v2/translate');
-define('WORDS_API_KEY', getenv('WORDS_API_KEY') ?: '');
-define('DEEP_L_API_KEY', getenv('DEEPL_API_KEY') ?: '');
+define('DICTIONARY_API_ENDPOINT', 'https://wordsapiv1.p.rapidapi.com/');
+define('TRANSLATE_API_ENDPOINT', 'https://libretranslate.com/translate');
+define('WORDS_API_KEY', getenv('WORDS_API_KEY'));
+define('WORDS_API_HOST', getenv('WORDS_API_HOST'));
+define('DEEP_L_API_KEY', getenv('DEEPL_API_KEY'));
 
 // API Request Settings
-define('API_TIMEOUT', 10); // seconds
+define('API_TIMEOUT', 30); // seconds
 define('API_MAX_RETRIES', 3);
 define('API_RETRY_DELAY', 1); // seconds
 
