@@ -1,4 +1,16 @@
-<?php include 'header.php'; ?>
+<?php
+
+session_start();
+
+// If user is logged in, redirect to dashboard
+if (isset($_SESSION['user_id'])) {
+    header('Location: /view/dashboard.php');
+    exit();
+}
+
+// Include header (remove redirect to login since this is our landing page)
+include 'header.php'; 
+?>
 
 <div style="text-align: center; padding: 4rem 0;">
     <h1>Want to learn a new language?</h1>
@@ -27,4 +39,7 @@
     </ul>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php 
+include 'footer.php'; 
+?>
+

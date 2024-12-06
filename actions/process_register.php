@@ -19,8 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $userActions->register($firstName, $lastName, $email, $password);
 
     if ($result['success']) {
-        flashMessage('Registration successful! Please log in.', 'info');
-        header('Location: ../view/login.php');
+        // After successful registration, set session and redirect to onboarding
+        $_SESSION['user_id'] = $result['userId'];
+        header('Location: /view/onboarding.php?step=1');
     } else {
         flashMessage($result['message'], 'error');
         header('Location: ../view/register.php');

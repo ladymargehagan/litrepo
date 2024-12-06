@@ -3,6 +3,8 @@ require_once __DIR__ . '/../php/functions.php';
 require_once __DIR__ . '/../actions/TranslateAPI.php';
 require_once __DIR__ . '/../actions/CourseActions.php';
 require_once __DIR__ . '/../php/LogHandler.php';
+require_once __DIR__ . '/../actions/AnalyticsTracker.php';
+require_once __DIR__ . '/components/analytics_widgets.php';
 include 'header.php';
 
 // Ensure user is logged in
@@ -10,6 +12,10 @@ requireLogin();
 
 $translateAPI = new TranslateAPI();
 $courseActions = new CourseActions();
+$analytics = new AnalyticsTracker($_SESSION['user_id']);
+
+// Track dashboard view
+$analytics->trackEvent('dashboard_view');
 
 // Get word of the day with full definition, translation, and examples
 $wordOfDay = $translateAPI->getWordOfDay();
@@ -104,6 +110,13 @@ $userLevel = getUserLevel($totalWordsLearned);
             </div>
         </div>
     <?php endif; ?>
+
+    <div class="analytics-section">
+        <?php 
+        renderLearningStreak($analytics);
+        renderProgressChart($analytics);
+        ?>
+    </div>
 </div>
 
 <?php include 'footer.php'; ?>
