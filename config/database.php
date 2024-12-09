@@ -3,11 +3,11 @@ require_once __DIR__ . '/../php/LogHandler.php';
 
 class Database {
     private static $instance = null;
-    private $connection = null;
+    private $conn = null;
     
     private function __construct() {
         try {
-            $this->connection = new PDO(
+            $this->conn = new PDO(
                 "mysql:host=localhost;dbname=litdb;charset=utf8mb4",
                 "root",
                 "",
@@ -31,28 +31,34 @@ class Database {
     }
 
     public function getConnection() {
-        return $this->connection;
+        return $this->conn;
     }
 
     public function closeConnection() {
-        $this->connection = null;
+        $this->conn = null;
         self::$instance = null;
     }
 
     public function ensureConnection() {
-        if (!$this->connection || !$this->ping()) {
+        if (!$this->conn || !$this->ping()) {
             self::$instance = null;
             return self::getInstance()->getConnection();
         }
-        return $this->connection;
+        return $this->conn;
     }
 
     private function ping() {
         try {
-            $this->connection->query("SELECT 1");
+            $this->conn->query("SELECT 1");
             return true;
         } catch (PDOException $e) {
             return false;
+        }
+    }
+
+    public function __destruct() {
+        if ($this->conn) {
+            $this->conn = null;
         }
     }
 }

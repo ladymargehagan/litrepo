@@ -4,6 +4,8 @@ require_once __DIR__ . '/../php/LogHandler.php';
 
 header('Content-Type: application/json');
 
+session_start();
+
 if (!isset($_SESSION['user_id'])) {
     http_response_code(401);
     echo json_encode(['success' => false, 'message' => 'Unauthorized']);
@@ -11,6 +13,12 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $data = json_decode(file_get_contents('php://input'), true);
+if (!$data) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Invalid input']);
+    exit;
+}
+
 $userId = $_SESSION['user_id'];
 
 try {

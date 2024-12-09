@@ -1,13 +1,19 @@
 class LearningInterface {
     constructor() {
         this.container = document.querySelector('.exercise-container');
-        this.feedback = document.querySelector('.feedback');
-        this.celebration = document.querySelector('.celebration');
-        this.progressFill = document.querySelector('.progress-fill');
-        this.hearts = document.querySelector('.hearts');
+        if (!this.container) {
+            console.error('Exercise container not found');
+            return;
+        }
+        
+        this.feedback = document.querySelector('.feedback') || null;
+        this.celebration = document.querySelector('.celebration') || null;
+        this.progressFill = document.querySelector('.progress-fill') || null;
+        this.hearts = document.querySelector('.hearts') || null;
+        
         this.currentExercise = null;
         this.remainingHearts = 3;
-
+        
         this.bindEventListeners();
     }
 

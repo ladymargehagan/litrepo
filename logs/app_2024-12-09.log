@@ -1,0 +1,6 @@
+[2024-12-09 23:51:46] [INFO] Login attempt initiated
+[2024-12-09 23:51:47] [INFO] Successful login for user: margenana@home.com
+[2024-12-09 23:52:18] [INFO] Login attempt initiated
+[2024-12-09 23:52:18] [INFO] Successful login for user: margenana@home.com
+[2024-12-09 23:58:44] [ERROR] Error calculating streak: SQLSTATE[HY000]: General error: 4015 Window function is allowed only in SELECT list and ORDER BY clause
+[2024-12-09 23:59:49] [ERROR] Error calculating streak: SQLSTATE[HY000]: General error: 4015 Window function is allowed only in SELECT list and ORDER BY clause

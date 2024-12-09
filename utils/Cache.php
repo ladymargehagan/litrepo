@@ -6,11 +6,16 @@ class Cache {
     private $logger;
 
     public function __construct() {
-        $this->cacheDir = __DIR__ . '/../cache/';
+        $this->cacheDir = __DIR__ . '/../storage/cache/';
         $this->logger = new LogHandler();
         
         if (!file_exists($this->cacheDir)) {
-            mkdir($this->cacheDir, 0777, true);
+            mkdir($this->cacheDir, 0755, true);
+        }
+        
+        $htaccess = $this->cacheDir . '.htaccess';
+        if (!file_exists($htaccess)) {
+            file_put_contents($htaccess, "Deny from all");
         }
     }
 

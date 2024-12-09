@@ -1,11 +1,19 @@
 RewriteEngine On
-RewriteBase /litrepo/
+RewriteBase /
 
-# Redirect to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Redirect to public directory for assets
+RewriteRule ^css/(.*)$ public/css/$1 [L]
+RewriteRule ^js/(.*)$ public/js/$1 [L]
+RewriteRule ^images/(.*)$ public/images/$1 [L]
 
-# Handle requests to non-existent files/directories
+# Block access to sensitive directories
+RedirectMatch 403 ^/storage/.*$
+RedirectMatch 403 ^/config/.*$
+
+# Route API requests
+RewriteRule ^api/(.*)$ app/api.php?path=$1 [QSA,L]
+
+# Route all other requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L] 

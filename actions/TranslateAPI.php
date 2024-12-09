@@ -18,9 +18,9 @@ class TranslateAPI {
         $this->db = Database::getInstance();
     }
 
-    public function getWordOfDay() {
+    public function translateWord($word, $fromLang = 'en', $toLang = 'fr') {
         try {
-            // Use predefined words instead of random generation
+            // Use predefined translations similar to getWordOfDay
             $dailyWords = [
                 ['word' => 'hello', 'translation' => 'bonjour', 'definition' => [
                     ['partOfSpeech' => 'interjection', 
@@ -34,16 +34,21 @@ class TranslateAPI {
                     ['partOfSpeech' => 'noun', 
                      'definitions' => [['definition' => 'A written work', 'example' => 'I love reading books.']]]
                 ]]
+                // ... add more words as needed
             ];
+
+            // Find the translation for the given word
+            foreach ($dailyWords as $dailyWord) {
+                if ($dailyWord['word'] === strtolower($word)) {
+                    return $dailyWord;
+                }
+            }
             
-            // Use the day of the year to cycle through words
-            $dayOfYear = (int)date('z');
-            $wordIndex = $dayOfYear % count($dailyWords);
-            
-            return $dailyWords[$wordIndex];
+            // If word not found, return null
+            return null;
             
         } catch (Exception $e) {
-            $this->logger->error("Error in getWordOfDay: " . $e->getMessage());
+            $this->logger->error("Translation error: " . $e->getMessage());
             return null;
         }
     }
@@ -85,6 +90,35 @@ class TranslateAPI {
         }
         
         return null;
+    }
+
+    public function getWordOfDay() {
+        try {
+            // Predefined list of words with translations and definitions
+            $dailyWords = [
+                ['word' => 'hello', 'translation' => 'bonjour', 'definition' => [
+                    ['partOfSpeech' => 'interjection', 
+                     'definitions' => [['definition' => 'Used as a greeting', 'example' => 'Hello, how are you?']]]
+                ]],
+                ['word' => 'world', 'translation' => 'monde', 'definition' => [
+                    ['partOfSpeech' => 'noun', 
+                     'definitions' => [['definition' => 'The earth or globe', 'example' => 'He traveled around the world.']]]
+                ]],
+                ['word' => 'book', 'translation' => 'livre', 'definition' => [
+                    ['partOfSpeech' => 'noun', 
+                     'definitions' => [['definition' => 'A written work', 'example' => 'I love reading books.']]]
+                ]]
+                // ... add more words as needed
+            ];
+
+            // Get a random word from the list
+            $randomIndex = array_rand($dailyWords);
+            return $dailyWords[$randomIndex];
+            
+        } catch (Exception $e) {
+            $this->logger->error("Word of day error: " . $e->getMessage());
+            return null;
+        }
     }
 }
 

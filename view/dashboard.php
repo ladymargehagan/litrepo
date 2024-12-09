@@ -25,6 +25,9 @@ $userCourses = [];
 $enrolledCourses = [];
 $availableCourses = $courseActions->getAllCourses();
 
+// Initialize totalWordsLearned before use
+$totalWordsLearned = 0;
+
 // Get progress for enrolled courses
 foreach ($availableCourses as $course) {
     $progress = $courseActions->getUserProgress($_SESSION['user_id'], $course['courseId']);
@@ -88,7 +91,11 @@ $userLevel = getUserLevel($totalWordsLearned);
                         <p class="progress-text">
                             <?php echo $course['progress']['wordsLearned'] ?? 0; ?> / <?php echo $course['totalWords'] ?? 0; ?> words
                         </p>
-                        <a href="course.php?id=<?php echo $course['courseId']; ?>" class="continue-btn">Continue Learning</a>
+                        <?php if (strtolower($course['courseName']) === 'french'): ?>
+                            <a href="/view/learn-french.php" class="continue-btn">Continue Learning</a>
+                        <?php elseif (strtolower($course['courseName']) === 'spanish'): ?>
+                            <a href="/view/learn-spanish.php" class="continue-btn">Continue Learning</a>
+                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -105,6 +112,11 @@ $userLevel = getUserLevel($totalWordsLearned);
                 <?php foreach ($availableCourses as $course): ?> 
                     <div class="course-card">
                         <h3><?php echo htmlspecialchars($course['courseName']); ?></h3>
+                        <?php if (strtolower($course['courseName']) === 'french'): ?>
+                            <a href="/view/learn-french.php" class="start-btn">Start Learning</a>
+                        <?php elseif (strtolower($course['courseName']) === 'spanish'): ?>
+                            <a href="/view/learn-spanish.php" class="start-btn">Start Learning</a>
+                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>
